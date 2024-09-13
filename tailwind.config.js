@@ -68,10 +68,9 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
-
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [require("tailwindcss-animate"), addVariablesForColors],
 };
 
 function addVariablesForColors({ addBase, theme }) {
@@ -84,4 +83,3 @@ function addVariablesForColors({ addBase, theme }) {
     ":root": newVars,
   });
 }
-
