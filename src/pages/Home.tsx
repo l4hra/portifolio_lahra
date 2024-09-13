@@ -1,3 +1,4 @@
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Typewriter from "typewriter-effect";
 
@@ -20,10 +21,29 @@ export default function Home() {
     },
   ];
 
+  const items = [
+    {
+      quote: 'quote numer um',
+      name: 'name number one',
+      title: 'Lorelorelorelore',
+    },
+    {
+      quote: 'quote numer um',
+      name: 'name number one',
+      title: 'Lorelorelorelore',
+    },
+    {
+      quote: 'quote numer um',
+      name: 'name number one',
+      title: 'Lorelorelorelore',
+    }
+  ]
   return (
     <>
       {/* centraliza div */}
-      <div className="h-80 w-screen bg-black flex justify-center items-center gap-5 flex-col text-white">
+      <body className="w-screen h-screen bg-black ">
+    
+      <div className=" flex justify-center items-center gap-5 flex-col text-white ">
         <div className="text-4xl">
           <Typewriter
             options={{
@@ -35,14 +55,15 @@ export default function Home() {
         </div>
         <p className="">Frase de efeito/resuminho</p>
         <p className="">continuação/conclusão</p>
-        <p className="">continuação/conclusão</p>
-        <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-        <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
         
       </div>
       <div>
         <StickyScroll content={content}></StickyScroll>
       </div>
+      <div className=" flex justify-center items-center mt-16">
+       <InfiniteMovingCards items={items}/>
+      </div>
+      </body>
     </>
   );
 }
